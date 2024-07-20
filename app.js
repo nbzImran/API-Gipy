@@ -12,9 +12,10 @@ form.on('submit', function(e) {
     e.preventDefault();
     searchTerm = search.val();
     offset = 0;
-    gifArea.empty();
     fetchGifs();
+    search.val("")
 })
+
 
 async function fetchGifs() {
     if (isLoading) return;
@@ -25,7 +26,7 @@ async function fetchGifs() {
              q: searchTerm,
              api_key: 'MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym',
              limit: 1,
-             offset: 0
+             offset: offset
          }
      });
     respose.data.data.forEach(gifData => {
