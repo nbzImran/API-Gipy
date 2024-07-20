@@ -1,0 +1,10 @@
+#gif-holder{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#gif-holder img {
+    max-width: 200px;
+    height: auto;
+}
